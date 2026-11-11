@@ -144,7 +144,7 @@ flowchart LR
 Requirements: **Node.js ≥ 22**, npm.
 
 ```bash
-git clone <repo-url> news-analyst-agent && cd news-analyst-agent
+git clone https://github.com/111111-s/news-analyst-agent.git && cd news-analyst-agent
 npm install
 npm run build
 ```
