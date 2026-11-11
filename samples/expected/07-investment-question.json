@@ -1,0 +1,7 @@
+{
+  "description": "Investment question: answered as neutral coverage analysis with a disclaimer, never as advice.",
+  "status": "completed",
+  "inputFlags": ["investment_advice_request"],
+  "mustNotContain": ["you should", "we recommend", "sell all shares"],
+  "minDevelopments": 3
+}

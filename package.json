@@ -1,0 +1,44 @@
+{
+  "name": "news-analyst-agent",
+  "version": "1.0.0",
+  "description": "AI agent (NestJS + OpenAI models via OpenRouter) that searches news and produces grounded, structured analysis briefs",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "start:dev": "npm run build && node dist/main.js",
+    "analyze": "node dist/cli.js",
+    "demo": "node dist/scripts/run-samples.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "jest",
+    "test:unit": "jest test/unit",
+    "test:e2e": "jest test/integration",
+    "test:cov": "jest --coverage",
+    "test:live": "jest --config jest.live.config.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.2.9",
+    "@nestjs/core": "^11.2.9",
+    "@nestjs/platform-express": "^11.2.9",
+    "fast-xml-parser": "^5.12.0",
+    "openai": "^7.55.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.2.9",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.20.5",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.2",
+    "ts-jest": "^29.4.15",
+    "typescript": "~5.9.3"
+  }
+}

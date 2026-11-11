@@ -1,0 +1,51 @@
+{
+  "runId": "b94266fc-7093-4970-a5b2-62692cac2f6b",
+  "status": "invalid_input",
+  "createdAt": "2026-11-11T10:42:57.563Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "offline",
+    "model": "offline-heuristic-v1"
+  },
+  "request": null,
+  "plan": null,
+  "report": null,
+  "sources": [],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [
+    {
+      "code": "invalid_input",
+      "message": "query: query must be at least 3 characters"
+    },
+    {
+      "code": "invalid_input",
+      "message": "maxArticles: Too big: expected number to be <=15"
+    },
+    {
+      "code": "invalid_input",
+      "message": "from: `from` must be on or before `to`"
+    }
+  ],
+  "metrics": {
+    "durationMs": 1,
+    "llmCalls": 0,
+    "toolCalls": 0,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 0,
+    "repairAttempts": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "articlesFound": 0,
+    "articlesFetched": 0
+  },
+  "summaryMarkdown": "# Invalid request\n\n**Status:** invalid_input · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `b94266fc-7093-4970-a5b2-62692cac2f6b`\n\n## Errors\n\n- `invalid_input`: query: query must be at least 3 characters\n- `invalid_input`: maxArticles: Too big: expected number to be <=15\n- `invalid_input`: from: `from` must be on or before `to`\n\n---\n_offline:offline-heuristic-v1 · prompts news-agent/v1.0.0 · 0 LLM call(s), 0 tool call(s), 0 retries, 0 tokens, 0.0s_\n"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Comparison: both companies covered, with separate sentiment per entity.",
+  "status": "completed",
+  "intent": "comparison",
+  "mustCiteAnyOf": [["he-001", "he-002"], ["he-003", "he-004"], ["so-001"], ["so-002"]],
+  "minDevelopments": 4,
+  "entities": ["Helios", "Solaris"]
+}

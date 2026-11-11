@@ -1,0 +1,69 @@
+{
+  "runId": "9802ed48-2d1b-4eae-a23e-a88cccaa4fa2",
+  "status": "insufficient_data",
+  "createdAt": "2026-11-11T10:42:57.551Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "offline",
+    "model": "offline-heuristic-v1"
+  },
+  "request": {
+    "query": "Quantum computing startups in Antarctica",
+    "from": "2026-10-01",
+    "to": "2026-11-10",
+    "language": "en",
+    "maxArticles": 8
+  },
+  "plan": {
+    "intent": "company_brief",
+    "entities": [
+      "Quantum",
+      "Antarctica"
+    ],
+    "searchQueries": [
+      "Quantum computing startup",
+      "Quantum"
+    ],
+    "focus": [
+      "computing",
+      "startup"
+    ],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Quantum: no relevant coverage found (2026-10-01 – 2026-11-10)",
+    "executiveSummary": "No articles matching the request were found between 2026-10-01 and 2026-11-10. No developments are reported to avoid unsupported claims.",
+    "keyDevelopments": [],
+    "entitySentiment": [],
+    "risks": [],
+    "opportunities": [],
+    "openQuestions": [],
+    "coverageNotes": "Insufficient data: try a wider date range, different keywords or another news provider."
+  },
+  "sources": [],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 1,
+    "llmCalls": 3,
+    "toolCalls": 2,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 2,
+    "repairAttempts": 0,
+    "promptTokens": 1209,
+    "completionTokens": 54,
+    "articlesFound": 0,
+    "articlesFetched": 0
+  },
+  "summaryMarkdown": "# Quantum: no relevant coverage found (2026-10-01 – 2026-11-10)\n\n**Status:** insufficient_data · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `9802ed48-2d1b-4eae-a23e-a88cccaa4fa2`\n\n> Quantum computing startups in Antarctica\n\n## Executive summary\n\nNo articles matching the request were found between 2026-10-01 and 2026-11-10. No developments are reported to avoid unsupported claims.\n\n## Coverage notes\n\nInsufficient data: try a wider date range, different keywords or another news provider.\n\n---\n_offline:offline-heuristic-v1 · prompts news-agent/v1.0.0 · 3 LLM call(s), 2 tool call(s), 0 retries, 1263 tokens, 0.0s_\n"
+}

@@ -1,0 +1,4 @@
+{
+  "description": "Invalid input (empty query, reversed dates, budget too large) is rejected with field-level errors.",
+  "status": "invalid_input"
+}

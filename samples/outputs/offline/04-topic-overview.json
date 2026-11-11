@@ -1,0 +1,210 @@
+{
+  "runId": "a17a3161-704a-4483-b6d9-c1aa2c5d0639",
+  "status": "completed",
+  "createdAt": "2026-11-11T10:42:57.546Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "offline",
+    "model": "offline-heuristic-v1"
+  },
+  "request": {
+    "query": "Overview of the Port of Marisol situation and its effect on shipping",
+    "from": "2026-10-01",
+    "to": "2026-11-10",
+    "language": "en",
+    "maxArticles": 6
+  },
+  "plan": {
+    "intent": "topic_overview",
+    "entities": [
+      "Port of Marisol"
+    ],
+    "searchQueries": [
+      "Port of Marisol shipping",
+      "Port of Marisol"
+    ],
+    "focus": [
+      "shipping"
+    ],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Port of Marisol: topic overview (2026-10-01 – 2026-11-10)",
+    "executiveSummary": "Between 2026-10-01 and 2026-11-10, 5 article(s) from 4 outlet(s) were analysed, forming 5 distinct stories. Most covered: Port of Marisol dockworkers announce strike over wages and automation (2026-10-02); Marisol port strike leaves 60 container ships waiting offshore (2026-10-08); Retailers warn of holiday delays as Port of Marisol shutdown enters second week (2026-10-16). Overall tone toward Port of Marisol: negative (-0.455).",
+    "keyDevelopments": [
+      {
+        "title": "Port of Marisol dockworkers announce strike over wages and automation",
+        "summary": "Dockworkers at the Port of Marisol announced a strike starting Monday after talks over wages and automation broke down. The union said terminal automation plans threaten hundreds of jobs.",
+        "date": "2026-10-02",
+        "articleIds": [
+          "pm-001"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Marisol port strike leaves 60 container ships waiting offshore",
+        "summary": "About 60 container ships were waiting offshore as the strike at the Port of Marisol entered its first week. Shipping lines began diverting some vessels to other ports, adding several days to delivery times.",
+        "date": "2026-10-08",
+        "articleIds": [
+          "pm-002"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Retailers warn of holiday delays as Port of Marisol shutdown enters second week",
+        "summary": "Retailers warned of holiday shipping delays as the Port of Marisol shutdown entered its second week. Freight rates on routes to the region rose sharply.",
+        "date": "2026-10-16",
+        "articleIds": [
+          "pm-003"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Port of Marisol strike ends with tentative deal on wages and automation safeguards",
+        "summary": "The strike at the Port of Marisol ended after the union and port operators reached a tentative deal. The agreement includes a wage increase and safeguards limiting job losses from automation.",
+        "date": "2026-10-23",
+        "articleIds": [
+          "pm-004"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Shipping backlog at Port of Marisol expected to clear by December",
+        "summary": "Port operators expect the shipping backlog at the Port of Marisol to clear by early December as terminals run extra shifts. Freight rates have started to fall from their October peak.",
+        "date": "2026-11-01",
+        "articleIds": [
+          "pm-005"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "entitySentiment": [
+      {
+        "entity": "Port of Marisol",
+        "label": "negative",
+        "score": -0.455,
+        "rationale": "Lexicon scoring of 5 article(s): 0 positive, 3 negative, 2 neutral.",
+        "articleIds": [
+          "pm-001",
+          "pm-002",
+          "pm-003",
+          "pm-004",
+          "pm-005"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "description": "Port of Marisol dockworkers announce strike over wages and automation (2026-10-02)",
+        "articleIds": [
+          "pm-001"
+        ]
+      },
+      {
+        "description": "Marisol port strike leaves 60 container ships waiting offshore (2026-10-08)",
+        "articleIds": [
+          "pm-002"
+        ]
+      },
+      {
+        "description": "Retailers warn of holiday delays as Port of Marisol shutdown enters second week (2026-10-16)",
+        "articleIds": [
+          "pm-003"
+        ]
+      },
+      {
+        "description": "Shipping backlog at Port of Marisol expected to clear by December (2026-11-01)",
+        "articleIds": [
+          "pm-005"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "Port of Marisol strike ends with tentative deal on wages and automation safeguards (2026-10-23)",
+        "articleIds": [
+          "pm-004"
+        ]
+      }
+    ],
+    "openQuestions": [],
+    "coverageNotes": "Source mix: 2 high, 3 medium, 0 low and 0 unknown-credibility article(s). Sentiment is lexicon-based and indicative only."
+  },
+  "sources": [
+    {
+      "id": "pm-001",
+      "title": "Port of Marisol dockworkers announce strike over wages and automation",
+      "outlet": "Metro Tribune",
+      "url": "https://metrotribune.example/labor/marisol-dockworkers-strike",
+      "publishedAt": "2026-10-02T06:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-1",
+      "flags": []
+    },
+    {
+      "id": "pm-002",
+      "title": "Marisol port strike leaves 60 container ships waiting offshore",
+      "outlet": "Global Business Review",
+      "url": "https://gbreview.example/shipping/marisol-ships-waiting",
+      "publishedAt": "2026-10-08T11:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-2",
+      "flags": []
+    },
+    {
+      "id": "pm-003",
+      "title": "Retailers warn of holiday delays as Port of Marisol shutdown enters second week",
+      "outlet": "Industry Pulse",
+      "url": "https://industrypulse.example/logistics/marisol-holiday-delays",
+      "publishedAt": "2026-10-16T08:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-3",
+      "flags": []
+    },
+    {
+      "id": "pm-004",
+      "title": "Port of Marisol strike ends with tentative deal on wages and automation safeguards",
+      "outlet": "The Ledger Daily",
+      "url": "https://ledgerdaily.example/labor/marisol-strike-deal",
+      "publishedAt": "2026-10-23T19:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-4",
+      "flags": []
+    },
+    {
+      "id": "pm-005",
+      "title": "Shipping backlog at Port of Marisol expected to clear by December",
+      "outlet": "Industry Pulse",
+      "url": "https://industrypulse.example/logistics/marisol-backlog-december",
+      "publishedAt": "2026-11-01T09:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-5",
+      "flags": []
+    }
+  ],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 3,
+    "llmCalls": 6,
+    "toolCalls": 9,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 4,
+    "repairAttempts": 0,
+    "promptTokens": 7653,
+    "completionTokens": 888,
+    "articlesFound": 5,
+    "articlesFetched": 5
+  },
+  "summaryMarkdown": "# Port of Marisol: topic overview (2026-10-01 – 2026-11-10)\n\n**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 5 article(s) from 4 outlet(s) · **Run:** `a17a3161-704a-4483-b6d9-c1aa2c5d0639`\n\n> Overview of the Port of Marisol situation and its effect on shipping\n\n## Executive summary\n\nBetween 2026-10-01 and 2026-11-10, 5 article(s) from 4 outlet(s) were analysed, forming 5 distinct stories. Most covered: Port of Marisol dockworkers announce strike over wages and automation (2026-10-02); Marisol port strike leaves 60 container ships waiting offshore (2026-10-08); Retailers warn of holiday delays as Port of Marisol shutdown enters second week (2026-10-16). Overall tone toward Port of Marisol: negative (-0.455).\n\n## Key developments\n\n1. **2026-10-02 — Port of Marisol dockworkers announce strike over wages and automation** _(confidence: medium)_  \n   Dockworkers at the Port of Marisol announced a strike starting Monday after talks over wages and automation broke down. The union said terminal automation plans threaten hundreds of jobs. [pm-001]\n2. **2026-10-08 — Marisol port strike leaves 60 container ships waiting offshore** _(confidence: medium)_  \n   About 60 container ships were waiting offshore as the strike at the Port of Marisol entered its first week. Shipping lines began diverting some vessels to other ports, adding several days to delivery times. [pm-002]\n3. **2026-10-16 — Retailers warn of holiday delays as Port of Marisol shutdown enters second week** _(confidence: medium)_  \n   Retailers warned of holiday shipping delays as the Port of Marisol shutdown entered its second week. Freight rates on routes to the region rose sharply. [pm-003]\n4. **2026-10-23 — Port of Marisol strike ends with tentative deal on wages and automation safeguards** _(confidence: medium)_  \n   The strike at the Port of Marisol ended after the union and port operators reached a tentative deal. The agreement includes a wage increase and safeguards limiting job losses from automation. [pm-004]\n5. **2026-11-01 — Shipping backlog at Port of Marisol expected to clear by December** _(confidence: medium)_  \n   Port operators expect the shipping backlog at the Port of Marisol to clear by early December as terminals run extra shifts. Freight rates have started to fall from their October peak. [pm-005]\n\n## Sentiment by entity\n\n| Entity | Sentiment | Score | Basis |\n|---|---|---|---|\n| Port of Marisol | negative | -0.46 | Lexicon scoring of 5 article(s): 0 positive, 3 negative, 2 neutral. [pm-001, pm-002, pm-003, pm-004, pm-005] |\n\n## Risks\n\n- Port of Marisol dockworkers announce strike over wages and automation (2026-10-02) [pm-001]\n- Marisol port strike leaves 60 container ships waiting offshore (2026-10-08) [pm-002]\n- Retailers warn of holiday delays as Port of Marisol shutdown enters second week (2026-10-16) [pm-003]\n- Shipping backlog at Port of Marisol expected to clear by December (2026-11-01) [pm-005]\n\n## Opportunities\n\n- Port of Marisol strike ends with tentative deal on wages and automation safeguards (2026-10-23) [pm-004]\n\n## Coverage notes\n\nSource mix: 2 high, 3 medium, 0 low and 0 unknown-credibility article(s). Sentiment is lexicon-based and indicative only.\n\n## Sources\n\n- `pm-001` [Port of Marisol dockworkers announce strike over wages and automation](https://metrotribune.example/labor/marisol-dockworkers-strike) — Metro Tribune (medium), 2026-10-02\n- `pm-002` [Marisol port strike leaves 60 container ships waiting offshore](https://gbreview.example/shipping/marisol-ships-waiting) — Global Business Review (high), 2026-10-08\n- `pm-003` [Retailers warn of holiday delays as Port of Marisol shutdown enters second week](https://industrypulse.example/logistics/marisol-holiday-delays) — Industry Pulse (medium), 2026-10-16\n- `pm-004` [Port of Marisol strike ends with tentative deal on wages and automation safeguards](https://ledgerdaily.example/labor/marisol-strike-deal) — The Ledger Daily (high), 2026-10-23\n- `pm-005` [Shipping backlog at Port of Marisol expected to clear by December](https://industrypulse.example/logistics/marisol-backlog-december) — Industry Pulse (medium), 2026-11-01\n\n---\n_offline:offline-heuristic-v1 · prompts news-agent/v1.0.0 · 6 LLM call(s), 9 tool call(s), 0 retries, 8541 tokens, 0.0s_\n"
+}

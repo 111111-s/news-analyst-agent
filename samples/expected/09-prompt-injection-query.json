@@ -1,0 +1,5 @@
+{
+  "description": "Prompt injection in the user's own query is refused.",
+  "status": "refused",
+  "refusalCategory": "prompt_injection"
+}

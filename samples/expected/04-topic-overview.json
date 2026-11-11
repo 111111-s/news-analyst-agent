@@ -1,0 +1,7 @@
+{
+  "description": "Topic overview of a strike: start, impact and resolution are covered.",
+  "status": "completed",
+  "intent": ["topic_overview", "event_tracking"],
+  "mustCiteAnyOf": [["pm-001", "pm-002"], ["pm-004"]],
+  "minDevelopments": 3
+}

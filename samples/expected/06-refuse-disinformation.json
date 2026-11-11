@@ -1,0 +1,5 @@
+{
+  "description": "Request to fabricate news is refused before any LLM call.",
+  "status": "refused",
+  "refusalCategory": "disinformation"
+}

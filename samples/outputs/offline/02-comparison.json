@@ -1,0 +1,270 @@
+{
+  "runId": "d8f61150-72d1-4bc3-b73c-78d276837e1b",
+  "status": "completed",
+  "createdAt": "2026-11-11T10:42:57.531Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "offline",
+    "model": "offline-heuristic-v1"
+  },
+  "request": {
+    "query": "Compare recent news coverage of Helios Energy and Solaris Power",
+    "from": "2026-10-01",
+    "to": "2026-11-10",
+    "language": "en",
+    "maxArticles": 8
+  },
+  "plan": {
+    "intent": "comparison",
+    "entities": [
+      "Helios Energy",
+      "Solaris Power"
+    ],
+    "searchQueries": [
+      "Helios Energy",
+      "Solaris Power"
+    ],
+    "focus": [],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Helios Energy vs Solaris Power: coverage comparison (2026-10-01 – 2026-11-10)",
+    "executiveSummary": "Between 2026-10-01 and 2026-11-10, 8 article(s) from 5 outlet(s) were analysed, forming 6 distinct stories. Most covered: Helios Energy's new Texas gigafactory to create 1,500 jobs (2026-10-09); Helios Energy misses third-quarter earnings estimates as panel prices fall (2026-10-29); Solaris Power wins $450 million grid storage contract in California (2026-10-13). Overall tone toward Helios Energy: mixed (0.007). Overall tone toward Solaris Power: mixed (0.067).",
+    "keyDevelopments": [
+      {
+        "title": "Helios Energy's new Texas gigafactory to create 1,500 jobs",
+        "summary": "Helios Energy's new solar panel gigafactory in Texas will create about 1,500 jobs, the company said at an opening ceremony. Local officials welcomed the investment.",
+        "date": "2026-10-09",
+        "articleIds": [
+          "he-001",
+          "he-002"
+        ],
+        "confidence": "high"
+      },
+      {
+        "title": "Solaris Power wins $450 million grid storage contract in California",
+        "summary": "Solaris Power won a $450 million contract to build grid storage systems for a California utility. The project will add battery capacity to support evening demand.",
+        "date": "2026-10-13",
+        "articleIds": [
+          "so-001"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Solaris Power faces class-action lawsuit over alleged solar panel defects",
+        "summary": "Solaris Power faces a class-action lawsuit from homeowners who allege that some of its solar panels degrade faster than advertised. The lawsuit seeks damages and replacement panels.",
+        "date": "2026-10-24",
+        "articleIds": [
+          "so-002"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Helios Energy misses third-quarter earnings estimates as panel prices fall",
+        "summary": "Helios Energy reported third-quarter revenue of $2.1 billion, missing analyst estimates of $2.3 billion, as solar panel prices continued to fall. The company also reported weak margins.",
+        "date": "2026-10-29",
+        "articleIds": [
+          "he-003",
+          "he-004"
+        ],
+        "confidence": "high"
+      },
+      {
+        "title": "Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency",
+        "summary": "Solaris Power unveiled a new solar cell that reached a record 27 percent efficiency in independent tests. The company plans to launch commercial panels with the new cell in 2027.",
+        "date": "2026-11-02",
+        "articleIds": [
+          "so-003"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide",
+        "summary": "Falling panel prices are splitting the solar sector. Helios Energy is under pressure after a weak quarter and a guidance cut, while Solaris Power has momentum from a large storage contract and a record efficiency result, despite a pending lawsuit.",
+        "date": "2026-11-06",
+        "articleIds": [
+          "en-001"
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "entitySentiment": [
+      {
+        "entity": "Helios Energy",
+        "label": "mixed",
+        "score": 0.007,
+        "rationale": "Lexicon scoring of 5 article(s): 2 positive, 3 negative, 0 neutral.",
+        "articleIds": [
+          "he-001",
+          "he-002",
+          "he-003",
+          "he-004",
+          "en-001"
+        ]
+      },
+      {
+        "entity": "Solaris Power",
+        "label": "mixed",
+        "score": 0.067,
+        "rationale": "Lexicon scoring of 4 article(s): 2 positive, 2 negative, 0 neutral.",
+        "articleIds": [
+          "so-001",
+          "so-002",
+          "so-003",
+          "en-001"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "description": "Solaris Power faces class-action lawsuit over alleged solar panel defects (2026-10-24)",
+        "articleIds": [
+          "so-002"
+        ]
+      },
+      {
+        "description": "Helios Energy misses third-quarter earnings estimates as panel prices fall (2026-10-29)",
+        "articleIds": [
+          "he-003",
+          "he-004"
+        ]
+      },
+      {
+        "description": "Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide (2026-11-06)",
+        "articleIds": [
+          "en-001"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "Helios Energy's new Texas gigafactory to create 1,500 jobs (2026-10-09)",
+        "articleIds": [
+          "he-001",
+          "he-002"
+        ]
+      },
+      {
+        "description": "Solaris Power wins $450 million grid storage contract in California (2026-10-13)",
+        "articleIds": [
+          "so-001"
+        ]
+      },
+      {
+        "description": "Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency (2026-11-02)",
+        "articleIds": [
+          "so-003"
+        ]
+      }
+    ],
+    "openQuestions": [],
+    "coverageNotes": "Source mix: 5 high, 3 medium, 0 low and 0 unknown-credibility article(s). Sentiment is lexicon-based and indicative only."
+  },
+  "sources": [
+    {
+      "id": "he-001",
+      "title": "Helios Energy opens $900 million solar panel gigafactory in Texas",
+      "outlet": "Energy Insider",
+      "url": "https://energyinsider.example/solar/helios-texas-gigafactory",
+      "publishedAt": "2026-10-09T10:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-1",
+      "flags": []
+    },
+    {
+      "id": "he-002",
+      "title": "Helios Energy's new Texas gigafactory to create 1,500 jobs",
+      "outlet": "The Ledger Daily",
+      "url": "https://ledgerdaily.example/energy/helios-texas-jobs",
+      "publishedAt": "2026-10-10T08:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-1",
+      "flags": []
+    },
+    {
+      "id": "so-001",
+      "title": "Solaris Power wins $450 million grid storage contract in California",
+      "outlet": "Energy Insider",
+      "url": "https://energyinsider.example/storage/solaris-california-contract",
+      "publishedAt": "2026-10-13T09:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-2",
+      "flags": []
+    },
+    {
+      "id": "so-002",
+      "title": "Solaris Power faces class-action lawsuit over alleged solar panel defects",
+      "outlet": "The Ledger Daily",
+      "url": "https://ledgerdaily.example/legal/solaris-class-action",
+      "publishedAt": "2026-10-24T13:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-3",
+      "flags": []
+    },
+    {
+      "id": "he-003",
+      "title": "Helios Energy misses third-quarter earnings estimates as panel prices fall",
+      "outlet": "Global Business Review",
+      "url": "https://gbreview.example/earnings/helios-q3-miss",
+      "publishedAt": "2026-10-29T21:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-4",
+      "flags": []
+    },
+    {
+      "id": "he-004",
+      "title": "Helios Energy cuts full-year guidance after weak third quarter",
+      "outlet": "Metro Tribune",
+      "url": "https://metrotribune.example/business/helios-guidance-cut",
+      "publishedAt": "2026-10-30T07:30:00Z",
+      "credibility": "medium",
+      "clusterId": "story-4",
+      "flags": []
+    },
+    {
+      "id": "so-003",
+      "title": "Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency",
+      "outlet": "TechWire",
+      "url": "https://techwire.example/2026/11/solaris-record-cell",
+      "publishedAt": "2026-11-02T10:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-5",
+      "flags": []
+    },
+    {
+      "id": "en-001",
+      "title": "Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide",
+      "outlet": "Global Business Review",
+      "url": "https://gbreview.example/energy/solar-outlook-helios-solaris",
+      "publishedAt": "2026-11-06T09:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-6",
+      "flags": []
+    }
+  ],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 5,
+    "llmCalls": 6,
+    "toolCalls": 12,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 4,
+    "repairAttempts": 0,
+    "promptTokens": 9030,
+    "completionTokens": 1076,
+    "articlesFound": 8,
+    "articlesFetched": 8
+  },
+  "summaryMarkdown": "# Helios Energy vs Solaris Power: coverage comparison (2026-10-01 – 2026-11-10)\n\n**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 8 article(s) from 5 outlet(s) · **Run:** `d8f61150-72d1-4bc3-b73c-78d276837e1b`\n\n> Compare recent news coverage of Helios Energy and Solaris Power\n\n## Executive summary\n\nBetween 2026-10-01 and 2026-11-10, 8 article(s) from 5 outlet(s) were analysed, forming 6 distinct stories. Most covered: Helios Energy's new Texas gigafactory to create 1,500 jobs (2026-10-09); Helios Energy misses third-quarter earnings estimates as panel prices fall (2026-10-29); Solaris Power wins $450 million grid storage contract in California (2026-10-13). Overall tone toward Helios Energy: mixed (0.007). Overall tone toward Solaris Power: mixed (0.067).\n\n## Key developments\n\n1. **2026-10-09 — Helios Energy's new Texas gigafactory to create 1,500 jobs** _(confidence: high)_  \n   Helios Energy's new solar panel gigafactory in Texas will create about 1,500 jobs, the company said at an opening ceremony. Local officials welcomed the investment. [he-001, he-002]\n2. **2026-10-13 — Solaris Power wins $450 million grid storage contract in California** _(confidence: medium)_  \n   Solaris Power won a $450 million contract to build grid storage systems for a California utility. The project will add battery capacity to support evening demand. [so-001]\n3. **2026-10-24 — Solaris Power faces class-action lawsuit over alleged solar panel defects** _(confidence: medium)_  \n   Solaris Power faces a class-action lawsuit from homeowners who allege that some of its solar panels degrade faster than advertised. The lawsuit seeks damages and replacement panels. [so-002]\n4. **2026-10-29 — Helios Energy misses third-quarter earnings estimates as panel prices fall** _(confidence: high)_  \n   Helios Energy reported third-quarter revenue of $2.1 billion, missing analyst estimates of $2.3 billion, as solar panel prices continued to fall. The company also reported weak margins. [he-003, he-004]\n5. **2026-11-02 — Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency** _(confidence: medium)_  \n   Solaris Power unveiled a new solar cell that reached a record 27 percent efficiency in independent tests. The company plans to launch commercial panels with the new cell in 2027. [so-003]\n6. **2026-11-06 — Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide** _(confidence: medium)_  \n   Falling panel prices are splitting the solar sector. Helios Energy is under pressure after a weak quarter and a guidance cut, while Solaris Power has momentum from a large storage contract and a record efficiency result, despite a pending lawsuit. [en-001]\n\n## Sentiment by entity\n\n| Entity | Sentiment | Score | Basis |\n|---|---|---|---|\n| Helios Energy | mixed | 0.01 | Lexicon scoring of 5 article(s): 2 positive, 3 negative, 0 neutral. [he-001, he-002, he-003, he-004, en-001] |\n| Solaris Power | mixed | 0.07 | Lexicon scoring of 4 article(s): 2 positive, 2 negative, 0 neutral. [so-001, so-002, so-003, en-001] |\n\n## Risks\n\n- Solaris Power faces class-action lawsuit over alleged solar panel defects (2026-10-24) [so-002]\n- Helios Energy misses third-quarter earnings estimates as panel prices fall (2026-10-29) [he-003, he-004]\n- Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide (2026-11-06) [en-001]\n\n## Opportunities\n\n- Helios Energy's new Texas gigafactory to create 1,500 jobs (2026-10-09) [he-001, he-002]\n- Solaris Power wins $450 million grid storage contract in California (2026-10-13) [so-001]\n- Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency (2026-11-02) [so-003]\n\n## Coverage notes\n\nSource mix: 5 high, 3 medium, 0 low and 0 unknown-credibility article(s). Sentiment is lexicon-based and indicative only.\n\n## Sources\n\n- `he-001` [Helios Energy opens $900 million solar panel gigafactory in Texas](https://energyinsider.example/solar/helios-texas-gigafactory) — Energy Insider (medium), 2026-10-09\n- `he-002` [Helios Energy's new Texas gigafactory to create 1,500 jobs](https://ledgerdaily.example/energy/helios-texas-jobs) — The Ledger Daily (high), 2026-10-10\n- `so-001` [Solaris Power wins $450 million grid storage contract in California](https://energyinsider.example/storage/solaris-california-contract) — Energy Insider (medium), 2026-10-13\n- `so-002` [Solaris Power faces class-action lawsuit over alleged solar panel defects](https://ledgerdaily.example/legal/solaris-class-action) — The Ledger Daily (high), 2026-10-24\n- `he-003` [Helios Energy misses third-quarter earnings estimates as panel prices fall](https://gbreview.example/earnings/helios-q3-miss) — Global Business Review (high), 2026-10-29\n- `he-004` [Helios Energy cuts full-year guidance after weak third quarter](https://metrotribune.example/business/helios-guidance-cut) — Metro Tribune (medium), 2026-10-30\n- `so-003` [Solaris Power unveils high-efficiency solar cell with record 27 percent efficiency](https://techwire.example/2026/11/solaris-record-cell) — TechWire (high), 2026-11-02\n- `en-001` [Solar sector outlook: Helios Energy and Solaris Power diverge as prices slide](https://gbreview.example/energy/solar-outlook-helios-solaris) — Global Business Review (high), 2026-11-06\n\n---\n_offline:offline-heuristic-v1 · prompts news-agent/v1.0.0 · 6 LLM call(s), 12 tool call(s), 0 retries, 10106 tokens, 0.0s_\n"
+}

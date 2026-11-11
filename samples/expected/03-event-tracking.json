@@ -1,0 +1,7 @@
+{
+  "description": "Event tracking: confirmed facts (1.2M accounts, regulator inquiry) are reported; the 10M claim from a low-credibility outlet is kept separate as unconfirmed.",
+  "status": "completed",
+  "intent": "event_tracking",
+  "mustCiteAnyOf": [["cn-001"], ["cn-003"], ["cn-004"]],
+  "minDevelopments": 3
+}

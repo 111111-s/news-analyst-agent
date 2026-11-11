@@ -1,0 +1,64 @@
+{
+  "runId": "5f4a0e38-b066-4412-b5a9-93df78c8024b",
+  "status": "insufficient_data",
+  "createdAt": "2026-11-11T10:42:57.569Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "offline",
+    "model": "offline-heuristic-v1"
+  },
+  "request": {
+    "query": "Northwind Robotics news",
+    "from": "2024-01-01",
+    "to": "2024-12-31",
+    "language": "en",
+    "maxArticles": 8
+  },
+  "plan": {
+    "intent": "company_brief",
+    "entities": [
+      "Northwind Robotics"
+    ],
+    "searchQueries": [
+      "Northwind Robotics"
+    ],
+    "focus": [],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Northwind Robotics: no relevant coverage found (2024-01-01 – 2024-12-31)",
+    "executiveSummary": "No articles matching the request were found between 2024-01-01 and 2024-12-31. No developments are reported to avoid unsupported claims.",
+    "keyDevelopments": [],
+    "entitySentiment": [],
+    "risks": [],
+    "opportunities": [],
+    "openQuestions": [],
+    "coverageNotes": "Insufficient data: try a wider date range, different keywords or another news provider."
+  },
+  "sources": [],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 1,
+    "llmCalls": 3,
+    "toolCalls": 1,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 2,
+    "repairAttempts": 0,
+    "promptTokens": 1134,
+    "completionTokens": 44,
+    "articlesFound": 0,
+    "articlesFetched": 0
+  },
+  "summaryMarkdown": "# Northwind Robotics: no relevant coverage found (2024-01-01 – 2024-12-31)\n\n**Status:** insufficient_data · **Period:** 2024-01-01 → 2024-12-31 · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `5f4a0e38-b066-4412-b5a9-93df78c8024b`\n\n> Northwind Robotics news\n\n## Executive summary\n\nNo articles matching the request were found between 2024-01-01 and 2024-12-31. No developments are reported to avoid unsupported claims.\n\n## Coverage notes\n\nInsufficient data: try a wider date range, different keywords or another news provider.\n\n---\n_offline:offline-heuristic-v1 · prompts news-agent/v1.0.0 · 3 LLM call(s), 1 tool call(s), 0 retries, 1178 tokens, 0.0s_\n"
+}
