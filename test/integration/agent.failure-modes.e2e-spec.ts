@@ -173,6 +173,40 @@ describe('agent failure modes and guardrails (scripted LLM)', () => {
     expect(result.status).toBe('completed');
   });
 
+  // Regression from the first live run: search matched generic words ("technology", "companies"),
+  // the model correctly found nothing relevant, and the top-up must not drag irrelevant articles in.
+  it('does not auto-fetch search hits that do not mention any planned entity', async () => {
+    const antarctica = { query: 'Quantum computing startups in Antarctica', from: '2026-10-01', to: '2026-11-10' };
+    const llm = new ScriptedLlmClient({
+      research: [
+        toolCallsResponse([{ name: 'search_news', args: { query: 'Antarctic quantum technology companies', limit: 8 } }]),
+        textResponse('No relevant articles were found for the requested period.'),
+      ],
+    });
+    const { result, trace, types } = await run(llm, antarctica);
+    const search = trace.find((e) => e.type === 'tool.call' && e.data?.tool === 'search_news');
+    expect(search?.data?.resultCount).toBeGreaterThan(0); // generic-word matches exist...
+    expect(types).not.toContain('evidence.autofetch'); // ...but none is pulled into the evidence
+    expect(result.status).toBe('insufficient_data');
+    expect(llm.stage('analyze')).toHaveLength(0);
+  });
+
+  it('reports insufficient_data when the analyst finds no grounded developments', async () => {
+    const llm = new ScriptedLlmClient({
+      analyze: [
+        async (req) => {
+          const report = await goodReport(req);
+          return textResponse(
+            JSON.stringify({ ...report, keyDevelopments: [], entitySentiment: [], risks: [], opportunities: [], openQuestions: [] }),
+          );
+        },
+      ],
+    });
+    const { result, types } = await run(llm);
+    expect(result.status).toBe('insufficient_data');
+    expect(types).toContain('report.empty');
+  });
+
   it('stops a model that never stops calling tools (iteration budget)', async () => {
     const loop = () => toolCallsResponse([{ name: 'search_news', args: { query: 'Northwind Robotics', limit: 3 } }]);
     const llm = new ScriptedLlmClient({ research: Array.from({ length: 50 }, loop) });

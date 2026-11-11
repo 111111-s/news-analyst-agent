@@ -1,6 +1,6 @@
 # Port of Marisol: topic overview (2026-10-01 – 2026-11-10)
 
-**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 5 article(s) from 4 outlet(s) · **Run:** `a17a3161-704a-4483-b6d9-c1aa2c5d0639`
+**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 5 article(s) from 4 outlet(s) · **Run:** `0131ec8f-7a65-48e2-87ec-769805fdd4aa`
 
 > Overview of the Port of Marisol situation and its effect on shipping
 

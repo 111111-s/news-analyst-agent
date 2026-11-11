@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { EvidenceArticle, EvidencePack } from '../analysis/analysis.types';
 import { ClusteringService } from '../analysis/clustering.service';
 import { ExtractiveReportBuilder } from '../analysis/extractive-report.builder';
-import { SentimentService } from '../analysis/sentiment.service';
+import { entityMentioned, SentimentService } from '../analysis/sentiment.service';
 import { extractJson, formatZodIssues } from '../common/json';
 import { toStrictJsonSchema } from '../common/json-schema';
 import { errorMessage, TransientError, withRetry } from '../common/retry';
@@ -270,13 +270,16 @@ export class NewsAgentService {
 
   private async buildEvidence(request: NormalizedRequest, plan: Plan, state: ResearchState, ctx: RunContext): Promise<EvidencePack> {
     // Deterministic completion: if the model under-fetched, top up from search results so the
-    // analysis never runs on an artificially thin evidence base.
+    // analysis never runs on an artificially thin evidence base. Only results that mention a planned
+    // entity qualify: search can match on generic words, and the model may have skipped them on purpose.
     const minimum = Math.min(request.maxArticles, 3);
     if (state.fetched.size < minimum) {
       const before = state.fetched.size;
-      for (const candidate of state.searchResults.keys()) {
+      const relevant = (s: { title: string; snippet: string }) =>
+        plan.entities.length === 0 || plan.entities.some((e) => entityMentioned(`${s.title} ${s.snippet}`, e));
+      for (const [candidate, summary] of state.searchResults) {
         if (state.fetched.size >= minimum) break;
-        if (state.fetched.has(candidate)) continue;
+        if (state.fetched.has(candidate) || !relevant(summary)) continue;
         await this.tools.execute(
           { id: `agent-autofetch-${candidate}`, name: 'fetch_article', arguments: JSON.stringify({ articleId: candidate }) },
           { request, state },
@@ -344,12 +347,14 @@ export class NewsAgentService {
     }
 
     if (outcome.value) {
-      r.status = 'completed';
       r.report = outcome.value.report;
       r.guardrails.corrections = outcome.value.corrections;
       if (outcome.value.corrections.length) {
         ctx.tracer.event('validation.corrected', { corrections: outcome.value.corrections.map((c) => `${c.path}:${c.rule}`) });
       }
+      // The analyst found nothing relevant in the evidence: report that honestly instead of "completed".
+      r.status = r.report.keyDevelopments.length === 0 ? 'insufficient_data' : 'completed';
+      if (r.status === 'insufficient_data') ctx.tracer.event('report.empty', { reason: 'no grounded developments in evidence' });
       return;
     }
     r.status = 'partial';

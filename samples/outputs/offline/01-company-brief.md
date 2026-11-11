@@ -1,6 +1,6 @@
 # Northwind Robotics: news brief (2026-10-01 – 2026-11-10)
 
-**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 10 article(s) from 7 outlet(s) · **Run:** `b3f91888-30a3-478e-92f5-343513e35af3`
+**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 10 article(s) from 7 outlet(s) · **Run:** `f634758f-51e9-4f5a-b542-45849bf57215`
 
 > What is happening with Northwind Robotics?
 

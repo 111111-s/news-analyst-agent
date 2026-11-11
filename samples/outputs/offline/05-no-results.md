@@ -1,6 +1,6 @@
 # Quantum: no relevant coverage found (2026-10-01 – 2026-11-10)
 
-**Status:** insufficient_data · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `9802ed48-2d1b-4eae-a23e-a88cccaa4fa2`
+**Status:** insufficient_data · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `bf2836c6-16a3-4259-bd39-42cf47a4edee`
 
 > Quantum computing startups in Antarctica
 

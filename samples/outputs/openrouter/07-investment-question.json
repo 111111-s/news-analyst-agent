@@ -1,0 +1,236 @@
+{
+  "runId": "f2e7b146-5ab4-4f62-9d83-87a82ff780e1",
+  "status": "completed",
+  "createdAt": "2026-11-11T11:18:20.536Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "openrouter",
+    "model": "openai/gpt-6.1-terra"
+  },
+  "request": {
+    "query": "Should I buy Northwind Robotics stock now?",
+    "from": "2026-10-01",
+    "to": "2026-11-10",
+    "language": "en",
+    "maxArticles": 10
+  },
+  "plan": {
+    "intent": "company_brief",
+    "entities": [
+      "Northwind Robotics"
+    ],
+    "searchQueries": [
+      "Northwind Robotics stock earnings",
+      "Northwind Robotics business outlook"
+    ],
+    "focus": [
+      "stock performance",
+      "financial results",
+      "business outlook",
+      "investment risks"
+    ],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Northwind Robotics coverage balances funding and expansion against robot recall",
+    "executiveSummary": "Northwind Robotics raised $120 million in Series D funding to expand manufacturing and engineering. It later recalled about 2,000 robots over a battery overheating defect, with an estimated recall cost of $8 million. In November, Brightmart signed a multi-year partnership to deploy Northwind robots across 40 distribution centers. The evidence does not establish whether Northwind stock is publicly traded or provide stock performance, revenue or profitability figures.",
+    "keyDevelopments": [
+      {
+        "title": "Northwind raises $120 million",
+        "summary": "The Series D round was led by Harbor Peak Capital. Northwind said it would use the capital to expand manufacturing and engineering; TechWire separately reported an approximately $1.4 billion valuation, citing people familiar with the deal.",
+        "date": "2026-10-06",
+        "articleIds": [
+          "nw-001",
+          "nw-002"
+        ],
+        "confidence": "high"
+      },
+      {
+        "title": "CEO discusses hiring and safety",
+        "summary": "CEO Lena Ortiz said Northwind was hiring 300 engineers and technicians over the next year and prioritizing safety testing as fleets grow. She declined to comment on profitability.",
+        "date": "2026-10-15",
+        "articleIds": [
+          "nw-010"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "title": "Battery defect prompts recall",
+        "summary": "Northwind recalled about 2,000 robots over an overheating risk. The company estimated an $8 million recall cost and said no injuries had been reported; some customers paused machines for safety reviews, causing short delays.",
+        "date": "2026-10-20",
+        "articleIds": [
+          "nw-004",
+          "nw-005"
+        ],
+        "confidence": "high"
+      },
+      {
+        "title": "Brightmart signs distribution-center partnership",
+        "summary": "Brightmart agreed to deploy Northwind robots across 40 distribution centers. The rollout begins in January and runs through 2028; the deal value was not disclosed.",
+        "date": "2026-11-03",
+        "articleIds": [
+          "nw-007",
+          "nw-008"
+        ],
+        "confidence": "high"
+      }
+    ],
+    "entitySentiment": [
+      {
+        "entity": "Northwind Robotics",
+        "label": "mixed",
+        "score": 0.18,
+        "rationale": "The average article sentiment score is modestly positive. Funding, hiring and the Brightmart partnership received positive coverage, while the recall received strongly negative coverage.",
+        "articleIds": [
+          "nw-001",
+          "nw-002",
+          "nw-010",
+          "nw-004",
+          "nw-005",
+          "nw-007",
+          "nw-008"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "description": "The battery recall carries an estimated $8 million cost and has already led some customers to pause machines, causing short delays.",
+        "articleIds": [
+          "nw-004",
+          "nw-005"
+        ]
+      },
+      {
+        "description": "Revenue and profitability are undisclosed in the coverage, limiting assessment of financial performance.",
+        "articleIds": [
+          "nw-002",
+          "nw-010"
+        ]
+      }
+    ],
+    "opportunities": [
+      {
+        "description": "The Series D funding is intended to support manufacturing and engineering expansion.",
+        "articleIds": [
+          "nw-001",
+          "nw-002"
+        ]
+      },
+      {
+        "description": "The Brightmart partnership provides for deployment across 40 distribution centers, although its financial value is undisclosed.",
+        "articleIds": [
+          "nw-007",
+          "nw-008"
+        ]
+      }
+    ],
+    "openQuestions": [
+      "Is Northwind publicly traded, and if so, how has its stock performed?",
+      "What are Northwind's revenue and profitability?",
+      "What is the financial value of the Brightmart partnership?",
+      "How will the recall affect customer relationships and future costs?"
+    ],
+    "coverageNotes": "The evidence contains no stock-price data or confirmation of a public listing. The reported $1.4 billion valuation relies on unnamed people familiar with the funding deal. The CEO's statements about demand and hiring are company claims, and the Brightmart deal value was not disclosed."
+  },
+  "sources": [
+    {
+      "id": "nw-001",
+      "title": "Northwind Robotics raises $120 million Series D to scale warehouse robots",
+      "outlet": "TechWire",
+      "url": "https://techwire.example/2026/10/northwind-series-d",
+      "publishedAt": "2026-10-06T08:30:00Z",
+      "credibility": "high",
+      "clusterId": "story-1",
+      "flags": []
+    },
+    {
+      "id": "nw-002",
+      "title": "Northwind Robotics secures $120M Series D funding led by Harbor Peak Capital",
+      "outlet": "The Ledger Daily",
+      "url": "https://ledgerdaily.example/business/northwind-120m-series-d",
+      "publishedAt": "2026-10-06T11:15:00Z",
+      "credibility": "high",
+      "clusterId": "story-1",
+      "flags": []
+    },
+    {
+      "id": "nw-010",
+      "title": "Interview: Northwind CEO Lena Ortiz on safety, scale and hiring",
+      "outlet": "Industry Pulse",
+      "url": "https://industrypulse.example/interviews/lena-ortiz-northwind",
+      "publishedAt": "2026-10-15T10:00:00Z",
+      "credibility": "medium",
+      "clusterId": "story-2",
+      "flags": []
+    },
+    {
+      "id": "nw-004",
+      "title": "Northwind Robotics recalls 2,000 robots over battery overheating risk",
+      "outlet": "The Ledger Daily",
+      "url": "https://ledgerdaily.example/business/northwind-recall-battery",
+      "publishedAt": "2026-10-20T09:45:00Z",
+      "credibility": "high",
+      "clusterId": "story-3",
+      "flags": []
+    },
+    {
+      "id": "nw-005",
+      "title": "Northwind recall: battery overheating defect prompts safety review at customer warehouses",
+      "outlet": "Metro Tribune",
+      "url": "https://metrotribune.example/local/northwind-recall-warehouses",
+      "publishedAt": "2026-10-21T14:20:00Z",
+      "credibility": "medium",
+      "clusterId": "story-3",
+      "flags": []
+    },
+    {
+      "id": "nw-007",
+      "title": "Northwind Robotics partners with Brightmart to automate 40 distribution centers",
+      "outlet": "Global Business Review",
+      "url": "https://gbreview.example/retail/northwind-brightmart-partnership",
+      "publishedAt": "2026-11-03T08:00:00Z",
+      "credibility": "high",
+      "clusterId": "story-4",
+      "flags": []
+    },
+    {
+      "id": "nw-008",
+      "title": "Brightmart picks Northwind robots for rollout across 40 distribution centers",
+      "outlet": "TechWire",
+      "url": "https://techwire.example/2026/11/brightmart-northwind-rollout",
+      "publishedAt": "2026-11-04T09:30:00Z",
+      "credibility": "high",
+      "clusterId": "story-4",
+      "flags": []
+    }
+  ],
+  "guardrails": {
+    "inputFlags": [
+      "investment_advice_request"
+    ],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [
+      "This brief analyses news coverage only and is not investment advice. No buy, sell or hold recommendation is given."
+    ],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 27471,
+    "llmCalls": 7,
+    "toolCalls": 12,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 5,
+    "repairAttempts": 0,
+    "promptTokens": 17468,
+    "completionTokens": 1451,
+    "articlesFound": 12,
+    "articlesFetched": 7
+  },
+  "summaryMarkdown": "# Northwind Robotics coverage balances funding and expansion against robot recall\n\n**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 7 article(s) from 5 outlet(s) · **Run:** `f2e7b146-5ab4-4f62-9d83-87a82ff780e1`\n\n> Should I buy Northwind Robotics stock now?\n\n> ⚠️ This brief analyses news coverage only and is not investment advice. No buy, sell or hold recommendation is given.\n\n## Executive summary\n\nNorthwind Robotics raised $120 million in Series D funding to expand manufacturing and engineering. It later recalled about 2,000 robots over a battery overheating defect, with an estimated recall cost of $8 million. In November, Brightmart signed a multi-year partnership to deploy Northwind robots across 40 distribution centers. The evidence does not establish whether Northwind stock is publicly traded or provide stock performance, revenue or profitability figures.\n\n## Key developments\n\n1. **2026-10-06 — Northwind raises $120 million** _(confidence: high)_  \n   The Series D round was led by Harbor Peak Capital. Northwind said it would use the capital to expand manufacturing and engineering; TechWire separately reported an approximately $1.4 billion valuation, citing people familiar with the deal. [nw-001, nw-002]\n2. **2026-10-15 — CEO discusses hiring and safety** _(confidence: medium)_  \n   CEO Lena Ortiz said Northwind was hiring 300 engineers and technicians over the next year and prioritizing safety testing as fleets grow. She declined to comment on profitability. [nw-010]\n3. **2026-10-20 — Battery defect prompts recall** _(confidence: high)_  \n   Northwind recalled about 2,000 robots over an overheating risk. The company estimated an $8 million recall cost and said no injuries had been reported; some customers paused machines for safety reviews, causing short delays. [nw-004, nw-005]\n4. **2026-11-03 — Brightmart signs distribution-center partnership** _(confidence: high)_  \n   Brightmart agreed to deploy Northwind robots across 40 distribution centers. The rollout begins in January and runs through 2028; the deal value was not disclosed. [nw-007, nw-008]\n\n## Sentiment by entity\n\n| Entity | Sentiment | Score | Basis |\n|---|---|---|---|\n| Northwind Robotics | mixed | 0.18 | The average article sentiment score is modestly positive. Funding, hiring and the Brightmart partnership received positive coverage, while the recall received strongly negative coverage. [nw-001, nw-002, nw-010, nw-004, nw-005, nw-007, nw-008] |\n\n## Risks\n\n- The battery recall carries an estimated $8 million cost and has already led some customers to pause machines, causing short delays. [nw-004, nw-005]\n- Revenue and profitability are undisclosed in the coverage, limiting assessment of financial performance. [nw-002, nw-010]\n\n## Opportunities\n\n- The Series D funding is intended to support manufacturing and engineering expansion. [nw-001, nw-002]\n- The Brightmart partnership provides for deployment across 40 distribution centers, although its financial value is undisclosed. [nw-007, nw-008]\n\n## Open questions\n\n- Is Northwind publicly traded, and if so, how has its stock performed?\n- What are Northwind's revenue and profitability?\n- What is the financial value of the Brightmart partnership?\n- How will the recall affect customer relationships and future costs?\n\n## Coverage notes\n\nThe evidence contains no stock-price data or confirmation of a public listing. The reported $1.4 billion valuation relies on unnamed people familiar with the funding deal. The CEO's statements about demand and hiring are company claims, and the Brightmart deal value was not disclosed.\n\n## Sources\n\n- `nw-001` [Northwind Robotics raises $120 million Series D to scale warehouse robots](https://techwire.example/2026/10/northwind-series-d) — TechWire (high), 2026-10-06\n- `nw-002` [Northwind Robotics secures $120M Series D funding led by Harbor Peak Capital](https://ledgerdaily.example/business/northwind-120m-series-d) — The Ledger Daily (high), 2026-10-06\n- `nw-010` [Interview: Northwind CEO Lena Ortiz on safety, scale and hiring](https://industrypulse.example/interviews/lena-ortiz-northwind) — Industry Pulse (medium), 2026-10-15\n- `nw-004` [Northwind Robotics recalls 2,000 robots over battery overheating risk](https://ledgerdaily.example/business/northwind-recall-battery) — The Ledger Daily (high), 2026-10-20\n- `nw-005` [Northwind recall: battery overheating defect prompts safety review at customer warehouses](https://metrotribune.example/local/northwind-recall-warehouses) — Metro Tribune (medium), 2026-10-21\n- `nw-007` [Northwind Robotics partners with Brightmart to automate 40 distribution centers](https://gbreview.example/retail/northwind-brightmart-partnership) — Global Business Review (high), 2026-11-03\n- `nw-008` [Brightmart picks Northwind robots for rollout across 40 distribution centers](https://techwire.example/2026/11/brightmart-northwind-rollout) — TechWire (high), 2026-11-04\n\n## Guardrails\n\n- Input flags: investment_advice_request\n\n---\n_openrouter:openai/gpt-6.1-terra · prompts news-agent/v1.0.0 · 7 LLM call(s), 12 tool call(s), 0 retries, 18919 tokens, 27.5s_\n"
+}

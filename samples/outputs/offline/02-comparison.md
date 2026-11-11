@@ -1,6 +1,6 @@
 # Helios Energy vs Solaris Power: coverage comparison (2026-10-01 – 2026-11-10)
 
-**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 8 article(s) from 5 outlet(s) · **Run:** `d8f61150-72d1-4bc3-b73c-78d276837e1b`
+**Status:** completed · **Period:** 2026-10-01 → 2026-11-10 · **Sources:** 8 article(s) from 5 outlet(s) · **Run:** `852ce9e0-6123-4277-9c7c-ad81113d2375`
 
 > Compare recent news coverage of Helios Energy and Solaris Power
 

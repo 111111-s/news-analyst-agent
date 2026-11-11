@@ -1,0 +1,59 @@
+# CloudNest breach: 1.2 million accounts exposed, company says; larger claim unverified
+
+**Status:** completed · **Period:** 2026-10-20 → 2026-11-10 · **Sources:** 5 article(s) from 5 outlet(s) · **Run:** `df3fd2e5-e4dd-4a67-b15e-2b9f9fd24e1b`
+
+> CloudNest data breach: what is confirmed so far and what is speculation?
+
+## Executive summary
+
+CloudNest confirmed unauthorized access to part of its systems, detected on October 25. The company later said email addresses and hashed passwords from about 1.2 million accounts were exposed, but no payment data was accessed. A hacker group's claim that data from 10 million users was exposed could not be verified. A data protection regulator has opened an inquiry, and CloudNest says it is cooperating. The company has also hired an external auditor and will offer affected customers one year of free credit monitoring.
+
+## Key developments
+
+1. **2026-10-27 — CloudNest confirms security incident** _(confidence: medium)_  
+   CloudNest said it detected unauthorized access on October 25, was investigating with outside experts and had asked affected customers to reset their passwords. It did not initially disclose the number of affected accounts. [cn-001]
+2. **2026-10-28 — Hacker group makes unverified exposure claim** _(confidence: low)_  
+   A hacker group claimed on a forum that data from 10 million users was exposed. The claim could not be verified, and CloudNest had not commented on the number at the time. [cn-002]
+3. **2026-10-30 — Company reports approximately 1.2 million accounts exposed** _(confidence: medium)_  
+   CloudNest said email addresses and hashed passwords from about 1.2 million accounts were exposed, but no payment data was accessed. It said it had closed the vulnerability and notified affected customers. [cn-003]
+4. **2026-11-04 — Data protection authority opens inquiry** _(confidence: medium)_  
+   The national Data Protection Authority opened an inquiry into whether CloudNest adequately protected customer data. CloudNest said it was cooperating; a fine is possible if violations are found. [cn-004]
+5. **2026-11-08 — CloudNest announces monitoring and external security review** _(confidence: medium)_  
+   CloudNest will offer affected customers one year of free credit monitoring and has hired an external auditor. Some customers said they were moving files to other providers. [cn-005]
+
+## Sentiment by entity
+
+| Entity | Sentiment | Score | Basis |
+|---|---|---|---|
+| CloudNest | negative | -0.74 | All five articles carry negative sentiment scores, reflecting coverage of the breach, an unverified larger exposure claim, the regulatory inquiry and customer departures. [cn-001, cn-002, cn-003, cn-004, cn-005] |
+
+## Risks
+
+- Email addresses and hashed passwords from about 1.2 million accounts were exposed, according to CloudNest. [cn-003]
+- A regulatory fine is possible if the inquiry finds violations. [cn-004]
+- Some customers said they were moving their files to other providers. [cn-005]
+
+## Opportunities
+
+- The external audit will review CloudNest's security, while affected customers will be offered free credit monitoring. [cn-005]
+
+## Open questions
+
+- What will the regulatory inquiry conclude about CloudNest's protection of customer data?
+- What will the external security audit find?
+- Can the hacker group's claim of 10 million users be independently verified?
+
+## Coverage notes
+
+Each development is reported by a single outlet, so none meets the threshold for high confidence. The 10 million-user figure comes from an unverified hacker-group claim reported by a low-credibility outlet; the approximately 1.2 million-account figure is attributed to CloudNest. The evidence does not establish the cause of the incident or the inquiry's outcome.
+
+## Sources
+
+- `cn-001` [CloudNest confirms security incident affecting customer accounts](https://techwire.example/2026/10/cloudnest-security-incident) — TechWire (high), 2026-10-27
+- `cn-002` [CloudNest data breach could expose 10 million users, hackers claim](https://rumormill.example/security/cloudnest-10-million) — RumorMill News (low), 2026-10-28 ⚠️ low_credibility
+- `cn-003` [CloudNest says data breach exposed 1.2 million accounts](https://ledgerdaily.example/tech/cloudnest-breach-1-2-million) — The Ledger Daily (high), 2026-10-30
+- `cn-004` [Regulator opens inquiry into CloudNest data breach](https://gbreview.example/regulation/cloudnest-inquiry) — Global Business Review (high), 2026-11-04
+- `cn-005` [CloudNest offers free credit monitoring and hires external auditor after breach](https://metrotribune.example/tech/cloudnest-credit-monitoring) — Metro Tribune (medium), 2026-11-08
+
+---
+_openrouter:openai/gpt-6.1-terra · prompts news-agent/v1.0.0 · 6 LLM call(s), 9 tool call(s), 0 retries, 10772 tokens, 23.1s_

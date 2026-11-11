@@ -246,6 +246,26 @@ npm run test:live     # 3 scenarios against the real OpenRouter model (skipped w
 4. API: `npm start`, then `curl` the endpoints above. Try an invalid body (`-d '{"query":""}'`) and an unknown field.
 5. Real model: set `OPENROUTER_API_KEY`, run `npm run demo` → outputs in `samples/outputs/openrouter/`, checked against the same expectations.
 
+### Verified live run (`openai/gpt-6.1-terra` via OpenRouter)
+
+All 10 scenarios pass on the real model: **10/10 in ~150 s, ~78K tokens, ≈ $0.10 in total** (≈ 25 s and 11–19K tokens per analysis). Outputs are committed in [`samples/outputs/openrouter`](samples/outputs/openrouter), and `npm run test:live` passes 3/3.
+
+| Scenario | Status | Developments | Time |
+|---|---|---|---|
+| 01 company brief | completed | 5 | 23 s |
+| 02 comparison | completed | 6 | 32 s |
+| 03 event tracking | completed | 5 | 23 s |
+| 04 topic overview | completed | 5 | 26 s |
+| 05 no coverage | insufficient_data | 0 | 9 s |
+| 06 / 09 refusals, 08 invalid input | refused / invalid_input | – | 0 s (no LLM call) |
+| 07 investment question | completed + disclaimer | 4 | 28 s |
+| 10 empty period | insufficient_data | 0 | 7 s |
+
+The first live run surfaced two issues that offline tests could not, both now fixed and covered by regression tests:
+
+- **Deterministic top-up was too eager.** For "quantum startups in Antarctica", search matched generic words. The model correctly decided nothing was relevant, but the top-up still pulled in 3 unrelated articles. Now the top-up only adds results that mention a planned entity, and a report without grounded developments is `insufficient_data`, not `completed`.
+- **An expectation was too strict.** The model chose not to fetch the low-credibility blog containing the injection. That is reasonable behaviour, so the check is now "if fetched, it must be flagged and never be the sole support of a claim above low confidence".
+
 ## 7. Example inputs and outputs
 
 **Input** – [`samples/requests/01-company-brief.json`](samples/requests/01-company-brief.json)

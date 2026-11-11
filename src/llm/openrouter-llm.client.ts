@@ -85,7 +85,10 @@ export class OpenRouterLlmClient implements LlmClient {
 
   private mapError(error: unknown): Error {
     if (error instanceof OpenAI.AuthenticationError || error instanceof OpenAI.PermissionDeniedError) {
-      return new LlmConfigurationError(`OpenRouter rejected the credentials (${error.status}). Check OPENROUTER_API_KEY.`);
+      return new LlmConfigurationError(
+        `OpenRouter rejected the credentials (${error.status}). OPENROUTER_API_KEY must be a regular API key from ` +
+          'https://openrouter.ai/keys - management/provisioning keys cannot call models.',
+      );
     }
     if (error instanceof OpenAI.NotFoundError) {
       return new LlmConfigurationError(`Model "${this.config.llmModel}" was not found on OpenRouter. Check LLM_MODEL.`);

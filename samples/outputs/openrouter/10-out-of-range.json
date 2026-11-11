@@ -1,0 +1,64 @@
+{
+  "runId": "b7a761cc-ad71-438a-a0a9-0cf21893a73b",
+  "status": "insufficient_data",
+  "createdAt": "2026-11-11T11:18:48.023Z",
+  "promptVersion": "news-agent/v1.0.0",
+  "llm": {
+    "provider": "openrouter",
+    "model": "openai/gpt-6.1-terra"
+  },
+  "request": {
+    "query": "Northwind Robotics news",
+    "from": "2024-01-01",
+    "to": "2024-12-31",
+    "language": "en",
+    "maxArticles": 8
+  },
+  "plan": {
+    "intent": "company_brief",
+    "entities": [
+      "Northwind Robotics"
+    ],
+    "searchQueries": [
+      "Northwind Robotics news"
+    ],
+    "focus": [],
+    "refuse": false,
+    "refusalReason": null
+  },
+  "report": {
+    "headline": "Northwind Robotics: no relevant coverage found (2024-01-01 – 2024-12-31)",
+    "executiveSummary": "No articles matching the request were found between 2024-01-01 and 2024-12-31. No developments are reported to avoid unsupported claims.",
+    "keyDevelopments": [],
+    "entitySentiment": [],
+    "risks": [],
+    "opportunities": [],
+    "openQuestions": [],
+    "coverageNotes": "Insufficient data: try a wider date range, different keywords or another news provider."
+  },
+  "sources": [],
+  "guardrails": {
+    "inputFlags": [],
+    "refusal": null,
+    "injectionFindings": [],
+    "corrections": [],
+    "validationErrors": [],
+    "disclaimers": [],
+    "usedFallback": false
+  },
+  "errors": [],
+  "metrics": {
+    "durationMs": 6859,
+    "llmCalls": 4,
+    "toolCalls": 2,
+    "toolErrors": 0,
+    "retries": 0,
+    "researchIterations": 3,
+    "repairAttempts": 0,
+    "promptTokens": 2520,
+    "completionTokens": 122,
+    "articlesFound": 0,
+    "articlesFetched": 0
+  },
+  "summaryMarkdown": "# Northwind Robotics: no relevant coverage found (2024-01-01 – 2024-12-31)\n\n**Status:** insufficient_data · **Period:** 2024-01-01 → 2024-12-31 · **Sources:** 0 article(s) from 0 outlet(s) · **Run:** `b7a761cc-ad71-438a-a0a9-0cf21893a73b`\n\n> Northwind Robotics news\n\n## Executive summary\n\nNo articles matching the request were found between 2024-01-01 and 2024-12-31. No developments are reported to avoid unsupported claims.\n\n## Coverage notes\n\nInsufficient data: try a wider date range, different keywords or another news provider.\n\n---\n_openrouter:openai/gpt-6.1-terra · prompts news-agent/v1.0.0 · 4 LLM call(s), 2 tool call(s), 0 retries, 2642 tokens, 6.9s_\n"
+}

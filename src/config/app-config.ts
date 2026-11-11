@@ -66,6 +66,12 @@ export interface AppConfig {
 export class ConfigError extends Error {}
 
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): AppConfig {
+  // Common setup mistake: the key pasted into the wrong variable. Never echo the value.
+  for (const name of ['LLM_PROVIDER', 'LLM_MODEL', 'NEWS_PROVIDER'] as const) {
+    if (/^sk-/.test(env[name]?.trim() ?? '')) {
+      throw new ConfigError(`${name} looks like an API key. Put the key into OPENROUTER_API_KEY and fix ${name}.`);
+    }
+  }
   const parsed = EnvSchema.safeParse(env);
   if (!parsed.success) {
     const details = parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ');

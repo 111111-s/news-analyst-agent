@@ -20,6 +20,16 @@ describe('loadConfig', () => {
     expect(() => loadConfig({ LLM_PROVIDER: 'openrouter' })).toThrow(ConfigError);
     expect(() => loadConfig({ AGENT_MAX_ITERATIONS: '0' })).toThrow(ConfigError);
   });
+
+  it('detects an API key pasted into the wrong variable without echoing it', () => {
+    const secret = 'sk-or-v1-0123456789abcdef';
+    expect(() => loadConfig({ LLM_PROVIDER: secret })).toThrow(/LLM_PROVIDER looks like an API key/);
+    try {
+      loadConfig({ LLM_PROVIDER: secret });
+    } catch (error) {
+      expect((error as Error).message).not.toContain(secret);
+    }
+  });
 });
 
 describe('extractEntities (offline model)', () => {
